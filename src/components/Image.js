@@ -5,10 +5,17 @@ export default function Image({image}) {
         
         <section className="container">
             <div className="card">
-                <h2>{image.title}</h2>
-                <div className="">
-                    <img src={image.url} alt="" className="card-image"/>
+                <div className="author">
+                    <img src={image.url} alt="" className="profile"/>
+                    <h4>{image.date}</h4>
                 </div>
+                <div className="">
+                    {image.media_type === "image" ? 
+                    <img src={image.hdurl} alt="" className="card-image"/> :
+                    <iframe src={image.url} title="youtube-video" className="card-image"></iframe>
+                    }
+                </div>
+                <h3>{image.title}</h3>
                 <p className="card-text">{image.explanation}</p> 
             </div> 
         </section>
