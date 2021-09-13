@@ -3,11 +3,12 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import useFetchImage from '../utils/useFetchImage';
 import Image from './Image'
 import '../assets/css/Image.css';
+import Loading from './Loading';
 
 
 export default function Images() {
     const [count, setCount] = useState(6);
-    const [images, setImages] = useFetchImage(count);
+    const [images, setImages, isLoading] = useFetchImage(count);
 
     function ShowImages() {
         return (
@@ -17,7 +18,6 @@ export default function Images() {
                 className="scroll"
                 hasMore={true}
             >
-
             {images.map((img, index) => (
             <Image image={img} index={index}/>
             ))
@@ -26,6 +26,7 @@ export default function Images() {
     
         )
     }
+    if(isLoading) return <Loading/>;
     return (
         <div className="showImages">
             <ShowImages/>
