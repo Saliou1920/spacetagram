@@ -26,10 +26,11 @@ export default function Images() {
     
         )
     }
+    
     if(isLoading) return <Loading/>;
     return (
         <div className="showImages">
-            <ShowImages/>
+            <ShowImages className="test"/>
         </div>
     )
 }

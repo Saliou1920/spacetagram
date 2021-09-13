@@ -1,8 +1,22 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+@media (max-width: 1200px) and (min-width: 769px) {
+  .App {
+    padding: 3% 25%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .App {
+    padding: 3% 32%;
+  }
 }
