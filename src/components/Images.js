@@ -7,7 +7,7 @@ import Loading from './Loading';
 
 
 export default function Images() {
-    const [count, setCount] = useState(6);
+    const [count, setCount] = useState(20);
     const [images, setImages, isLoading] = useFetchImage(count);
 
     function ShowImages() {
