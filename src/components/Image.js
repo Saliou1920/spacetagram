@@ -1,5 +1,6 @@
 import React from 'react'
 import '../assets/css/Image.css';
+import Like from './Like';
 export default function Image({image}) {
     return (
         
@@ -16,7 +17,10 @@ export default function Image({image}) {
                     }
                 </div>
                 <h3>{image.title}</h3>
-                <p className="card-text">{image.explanation}</p> 
+                <p className="card-text">{image.explanation}</p>
+                <div>
+                <Like/>
+                </div> 
             </div> 
         </section>
         
