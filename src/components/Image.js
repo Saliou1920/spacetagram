@@ -1,9 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../assets/css/Image.css';
 import Like from './Like';
 export default function Image({image}) {
+    const [readMore, setReadMore] = useState(false);
+    const extraContent = <span>{(image.explanation).slice(150)}</span> 
+    const link = <span>
+        <span 
+            className="readMore" 
+            onClick={()=> {setReadMore(!readMore)}}
+        >
+            {readMore ? "" : "...  More"}
+        </span>
+        {readMore && extraContent}
+    </span>
+
     return (
-        
         <section className="container">
             <div className="card">
                 <div className="author">
@@ -17,7 +28,10 @@ export default function Image({image}) {
                     }
                 </div>
                 <h3>{image.title}</h3>
-                <p className="card-text">{image.explanation}</p>
+                <p className="card-text">
+                    {(image.explanation).slice(0,150)}{link}
+                </p>
+                {/* <ReadMore/> */}
                 <div>
                 <Like/>
                 </div> 

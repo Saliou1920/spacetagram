@@ -44,6 +44,10 @@ h4 {
 .test {
   padding-top: 200px;
 }
+.readMore {
+  cursor: pointer;
+  color: grey;
+}
 @media only screen and (max-width: 748px) {
   .scroll {
     padding-top: 80px;
