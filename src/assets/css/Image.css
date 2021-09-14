@@ -27,7 +27,8 @@ h4 {
   height: 100%;
 }
 
-.scroll {
+.scroll,
+.showImages {
   display: flex;
   flex-direction: column;
   gap: 1em;
