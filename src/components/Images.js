@@ -26,10 +26,9 @@ export default function Images() {
     
         )
     }
-    
-    // if(isLoading) return <Loading/>;
     return (
         <div className="showImages">
+            {isLoading && <Loading/>}
             <ShowImages className="test"/>
         </div>
     )
