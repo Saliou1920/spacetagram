@@ -18,7 +18,8 @@ h4 {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
 
-.card-text {
+.card-text,
+.image-title {
   padding: 1% 5%;
   text-align: justify;
 }

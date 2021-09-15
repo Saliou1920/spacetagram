@@ -27,7 +27,7 @@ export default function Image({image}) {
                     <iframe src={image.url} title="youtube-video" className="card-image"></iframe>
                     }
                 </div>
-                <h3>{image.title}</h3>
+                <h3 className="image-title">{image.title}</h3>
                 <p className="card-text">
                     {(image.explanation).slice(0,150)}{link}
                 </p>
