@@ -13,13 +13,13 @@ export default function useFetchImage(count) {
         axios.get(`${url}${key}&count=${count}`)
         .then(res => {
             console.log(res.data);
-            setImages([...res.data])
+            setImages([...images,...res.data])
             setIsLoading(false);
         })
         .catch(err => {
             console.log(err);
             setIsLoading(false);
         })
-    }, [])
+    }, [count])
     return [images, setImages, isLoading];
 }

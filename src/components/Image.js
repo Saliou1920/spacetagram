@@ -23,7 +23,7 @@ export default function Image({image}) {
                 </div>
                 <div className="">
                     {image.media_type === "image" ? 
-                    <img src={image.hdurl} alt="" className="card-image"/> :
+                    <img src={image.url} alt="" className="card-image"/> :
                     <iframe src={image.url} title="youtube-video" className="card-image"></iframe>
                     }
                 </div>

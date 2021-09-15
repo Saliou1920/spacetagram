@@ -7,14 +7,14 @@ import Loading from './Loading';
 
 
 export default function Images() {
-    const [count, setCount] = useState(20);
+    const [count, setCount] = useState(10);
     const [images, setImages, isLoading] = useFetchImage(count);
 
     function ShowImages() {
         return (
             <InfiniteScroll
                 dataLength={images.length} 
-                next={()=> setCount(count+1)}
+                next={()=> setCount(count+10)}
                 className="scroll"
                 hasMore={true}
             >
@@ -27,7 +27,7 @@ export default function Images() {
         )
     }
     
-    if(isLoading) return <Loading/>;
+    // if(isLoading) return <Loading/>;
     return (
         <div className="showImages">
             <ShowImages className="test"/>
