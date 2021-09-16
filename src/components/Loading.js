@@ -7,7 +7,7 @@ export default function Loading() {
         <div className="loading">
             <Loader
             type="ThreeDots"
-            color="#E94560"
+            color="##151515"
             height={100}
             width={100}
             timeout={2000} //2 secs
